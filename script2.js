@@ -14,7 +14,7 @@ var html = [
     { q: "Which tag do you link bootstrap in?", r: ["header", "html", "lead", "head"], a: "3" },
     { q: "Which tag do you link the js file in?", r: ["body", "header", "head", "div"], a: "0" },
     { q: "How do you call the .container{} from the css file?", r: ["class='container'", "rel='container'", "href='container'", "scr='container'"], a: "0" },
-    { q: "Which tag does not change the text?", r: ["h1", "div", "h3", "h5"], a: "1" },
+    { q: "Which tag does not change the text font?", r: ["h1", "div", "h3", "h5"], a: "1" },
     { q: "Which one does not have an html end tag?", r: ["div", "button", "br", "li"], a: "2" },
     { q: "Is it possible to change the color of the bullet?", r: ["yes", "maybe", "depends", "no"], a: "0" },
     { q: "How do you comment in html?", r: ["//", "-m", "<-- -->", "<!-- -->"], a: "3" },
@@ -83,7 +83,7 @@ function quizTimer () {
         timer.textContent = quizTime + " seconds remaining";
         quizTime--;
 
-        if (quizTime === 0){
+        if (quizTime <= 0){
             clearInterval(quizInterval);
             clearQuestion();
             saveScore();
