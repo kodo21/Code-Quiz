@@ -16,7 +16,7 @@ var html = [
     { q: "How do you call the .container{} from the css file?", r: ["class='container'", "rel='container'", "href='container'", "scr='container'"], a: "0" },
     { q: "Which tag does not change the text?", r: ["h1", "div", "h3", "h5"], a: "1" },
     { q: "Which one does not have an html end tag?", r: ["div", "button", "br", "li"], a: "2" },
-    { q: "Is it possible to change the color of the bullet?", r: ["yes", "maybe", "depends", "no"], a: "3" },
+    { q: "Is it possible to change the color of the bullet?", r: ["yes", "maybe", "depends", "no"], a: "0" },
     { q: "How do you comment in html?", r: ["//", "-m", "<-- -->", "<!-- -->"], a: "3" },
     { q: "What color is blue in bootstrap?", r: ["danger", "succes", "primary", "secoundary"], a: "2" },
     { q: "How do you get the tag below the current one to show up next to it in the html page (instead of being below it by default)?", r: ["float-right", "float-left", "float-none", "float-float"], a: "1" }
