@@ -18,7 +18,7 @@ function displayscores () {
         var olist = document.createElement("p") ;
         olist.id ="test";
         olist.style = "list-style-type:none;";
-        // olist.innerHTML = style="list-style-type:none;";
+        
         highScores.appendChild(olist);
         //console.log(olist);
         

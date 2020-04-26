@@ -163,7 +163,7 @@ function saveScore () {
             })
         }
         console.log( oldScores.push())
-        localStorage.setItem('savescores', JSON.stringify(oldScores));// here gitjedi
+        localStorage.setItem('savescores', JSON.stringify(oldScores));
         window.location.href = "index.html";
     }
     else if(userInitials === null){
@@ -176,8 +176,8 @@ function saveScore () {
     oldScores.sort(function(a,b){
         return(b.score - a.score);
     })
-        //console.log( oldScores.push())
-        localStorage.setItem('savescores', JSON.stringify(oldScores));// here gitjedi
+        
+        localStorage.setItem('savescores', JSON.stringify(oldScores));
         window.location.href = "index.html";
      }
    
