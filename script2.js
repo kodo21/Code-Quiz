@@ -120,11 +120,11 @@ quizResponses.addEventListener("click", function (e) {
     console.log("click event: ", e.target.getAttribute("respID"))
     if (e.target.getAttribute("respID") == corrResp){
         totalScore = totalScore + quizTime;
-        wrongAnswer.textContent = "Correct Answer!";
+        wrongAnswer.textContent = "Previous Answer was Correct!";
     }
     else {
         quizTime -= 10;
-        wrongAnswer.textContent = "Wrong Answer";
+        wrongAnswer.textContent = "Previous Answer was Wrong!";
     }
     clearQuestion();
     showScore();
@@ -149,7 +149,7 @@ function saveScore () {
         if (oldScores === null){
             oldScores = [
                 {
-                    initials: userInitials, 
+                    initials: quizType.textContent + " - " + userInitials, 
                     score: totalScore
                 }
             ];
@@ -157,7 +157,7 @@ function saveScore () {
        
         else {
             oldScores.push({
-                    initials: userInitials, 
+                    initials: quizType.textContent + " " + userInitials, 
                     score: totalScore
                 });
             console.log("Scores", oldScores);
@@ -172,7 +172,7 @@ function saveScore () {
     else if(userInitials === null){
         userInitials = "";
         oldScores.push({
-            initials: userInitials, 
+            initials: quizType.textContent + " " + userInitials, 
             score: totalScore
         });
     console.log("Scores", oldScores);
