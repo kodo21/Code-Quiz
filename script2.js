@@ -4,12 +4,13 @@ var quizResponses = document.getElementById("quiz-responses");
 var quizScore = document.getElementById("quiz-score");
 var oldScores = JSON.parse(window.localStorage.getItem("savescores"));
 var quizType = document.getElementById("quiztype");
+var wrongAnswer = document.getElementById("wronganswer");
 var quizTime = 70;
 var totalScore = 0;
 var questionNum = 0;
 var corrResp;
 var questions;
- var tetet; console.log(tetet); console.log(tetet + "tetet"); console.log('test');
+
 var html = [
     { q: "Which tag do you link bootstrap in?", r: ["header", "html", "lead", "head"], a: "3" },
     { q: "Which tag do you link the js file in?", r: ["body", "header", "head", "div"], a: "0" },
@@ -119,9 +120,11 @@ quizResponses.addEventListener("click", function (e) {
     console.log("click event: ", e.target.getAttribute("respID"))
     if (e.target.getAttribute("respID") == corrResp){
         totalScore = totalScore + quizTime;
+        wrongAnswer.textContent = "Correct Answer!";
     }
     else {
         quizTime -= 10;
+        wrongAnswer.textContent = "Wrong Answer";
     }
     clearQuestion();
     showScore();
